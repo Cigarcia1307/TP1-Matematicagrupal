@@ -1,10 +1,22 @@
 while True:
-    
-    ingreso = int(input('\nPara convertir de decimal a binario ingrese 1, de binario a decimal ingrese 0: '))
+    print("\n*** Programa de conversión de números: binario/decimal - decimal/binario ***\n")
+    print()
+    print("0 - Convierta binario a decimal")
+    print("1 - convierta decimal a binario")
 
+    ingreso_char = input("\nElija la opción: ")
+
+    while ingreso_char != "1" and ingreso_char != "0":
+        print("Entrada inválida. Ingrese 1 o 0.")
+        ingreso_char = input("Para convertir de decimal a binario ingrese 1, de binario a decimal ingrese 0: ")       
+    ingreso = int(ingreso_char)
     if ingreso == 1:
         # Decimal a binario
-        numero = int(input("Ingrese el número que desea pasar a binario: "))
+        numero_char = input("Ingrese el número que desea pasar a binario: ")
+        while numero_char == "" or not numero_char.isdigit():
+            print("Entrada inválida. Ingrese solo números enteros positivos.")
+            numero_char = input("Ingrese el número que desea pasar a binario: ")
+        numero = int(numero_char)
         binario = ""
 
         if numero == 0:
@@ -19,6 +31,19 @@ while True:
     elif ingreso == 0:
         # Binario a decimal
         binario = input('Ingresa el número binario: ')
+        while binario == "" or True:
+            es_valido = True  
+
+            for caracter in binario:
+                if caracter != "0" and caracter != "1":
+                    es_valido = False
+                    break  
+
+            if binario == "" or not es_valido:
+                print("Entrada inválida. Ingrese solo ceros y unos.")
+                binario = input("Introduce un número binario: ")
+            else:
+                break  # Salimos del while si es válido
         if reversed(binario):
             decimal = 0
             potencia = 0
