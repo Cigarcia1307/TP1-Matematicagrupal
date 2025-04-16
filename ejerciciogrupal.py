@@ -1,8 +1,12 @@
 while True:
-    print("\n*** Programa de conversión de números: binario/decimal - decimal/binario ***\n")
+    print("\n" + "="*60)
+    print("        *** CONVERSOR BINARIO / DECIMAL ***")
+    print("="*60)
+    print("Seleccione una opción:")
     print()
-    print("0 - Convierta binario a decimal")
-    print("1 - convierta decimal a binario")
+    print("  [0]  Binario → Decimal")
+    print("  [1]  Decimal → Binario")
+    print("="*60)
 
     ingreso_char = input("\nElija la opción: ")
 
