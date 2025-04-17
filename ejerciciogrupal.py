@@ -52,7 +52,7 @@ while True:
         binario = input('Ingresa el número binario: ')
         
         # Valida que la entrada no esté vacía y que solo tenga 0 y 1
-        while binario == "" or True:
+        while binario == "":
             es_valido = True  # Supone que es válido
 
             # Verifica que cada carácter sea 0 o 1
